@@ -1,0 +1,22 @@
+import React from 'react';
+import { useState } from 'react';
+import {Button, StyleSheet, Text, View} from 'react-native';
+import NavBar from '../components/Footer/NavBar';
+import { useNavigation } from '@react-navigation/core';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+
+import {CompositeNavigationProp} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParamList} from '../components/RootStackParams';
+import {BottomTabBar, BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+import {MainBottomTabParamList} from '../components/MainBottomTabParams';
+
+
+export default function Home(){
+
+  return (
+    <NavBar/>
+
+  );
+}

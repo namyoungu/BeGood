@@ -10,8 +10,6 @@ import NavBar from './components/Footer/NavBar';
 import Main from './routes/Main';
 import Profile from './routes/Profile';
 import Calender from './routes/Calender';
-import Join from './routes/Join';
-import Home from './routes/Home';
 
 
 const Stack = createStackNavigator();
@@ -21,12 +19,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
+        <Tab.Navigator>
+          <Tab.Screen name="Main" component={Main} />
+          <Tab.Screen name="Profile" component={Profile} />
+          <Tab.Screen name="Calender" component={Calender} />
         
-        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
-        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
-        <Stack.Screen name="Main" component={Main} />
-        <Stack.Screen name="Join" component={Join} />
-        
+       </Tab.Navigator>
         
         
       </Stack.Navigator>
