@@ -15,7 +15,7 @@ export default function LoginMain(){
   const navigation = useNavigation<mainScreenProp>();
 
   return (
-    <>
+    <View style={styles.container}>
       <Text>LoginMain</Text>
       <Button
         title="LoginMain"
@@ -25,6 +25,16 @@ export default function LoginMain(){
         title="Join"
         onPress={() => navigation.navigate('Join')}
       />
-    </>
+      </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex : 1,
+    backgroundColor: 'white',
+    marginTop: 100
+  },
+  
+});
+
